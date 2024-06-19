@@ -1,5 +1,7 @@
 package ProjetoBanco;
 
+import java.util.Scanner;
+
 public class BancoChampions {
 
 	public static void main(String[] args) {
@@ -7,12 +9,18 @@ public class BancoChampions {
 		
 		// Banco Champions -  serviços 
 		
-		
-		int Saldo = 1000;
-		int Boleto = 1250;
-		int ChequeEspecial = 500;
+		Scanner scanner = new Scanner (System.in);
 		
 		System.out.println ("Bem vindo ao Banco Champions");
+		
+				
+		int Saldo = 1000;
+		System.out.println("Seu saldo é "+ Saldo);
+		System.out.println("digite o valor do seu boleto para pagamento:");
+		int Boleto = scanner.nextInt();
+		int ChequeEspecial = 500;
+		
+		
 		int SaldoBoleto = Saldo-Boleto;
 		if (Boleto<=Saldo) {
 			System.out.println("Pagamento efetuado,seu saldo atual é de R$"+SaldoBoleto);
